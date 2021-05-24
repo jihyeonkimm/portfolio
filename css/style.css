@@ -212,7 +212,7 @@ header .link {
 /* section works */
 .works {
   width: 100%;
-  height: 350vh;
+  height: 400vh;
 }
 .works .container {
   height: 100%;
@@ -253,40 +253,6 @@ header .link {
   width: 100%;
   height: 100%;
   position: absolute;
-}
-.works .work_item .work_item_animate {
-  background: #2046ed;
-  z-index: 3;
-  animation-name: boxAnimate;
-  animation-fill-mode: forwards;
-  animation-duration: 0.9s;
-  animation-timing-function: ease-in-out;
-}
-@keyframes boxAnimate {
-  0% {
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  33.3333% {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  66.6666% {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-  }
-  100% {
-    width: 0;
-    height: 100%;
-    top: 0;
-    right: 0;
-  }
 }
 .works .work_item .work_item_img img {
   width: 100%;
