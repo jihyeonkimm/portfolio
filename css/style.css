@@ -117,6 +117,90 @@ header .menu {
 header .menu a {
   display: block;
 }
+header .hamburger {
+  width: 25px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+header .hamburger span {
+  display: block;
+  width: 100%;
+  height: 12%;
+  background: #222;
+  transition: 0.5s;
+}
+header .hamburger.on span {
+  background: #fff;
+}
+header .hamburger.on span:nth-child(2) {
+  width: 50%;
+}
+header .nav_bar .mobile_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #2046ed;
+  opacity: 0;
+  transition: 0.5s;
+}
+header .nav_bar .mobile_menu.active {
+  opacity: 1;
+  height: 100vh;
+}
+header .nav_bar .mobile_menu_list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav_bar .mobile_menu_list .menu_item {
+  height: 30%;
+  color: #fff;
+  font-size: 48px;
+  padding-top: 5%;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s 0.4s;
+}
+header .nav_bar .menu_item.view {
+  padding-top: 0;
+  opacity: 1;
+}
+header .nav_bar .mobile_menu_list .menu_item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header .nav_bar .mobile_menu_list li::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.4s;
+}
+header .nav_bar .mobile_menu_list li:hover::after {
+  width: 100%;
+}
 header .section_indicator {
   position: absolute;
   top: 50vh;
@@ -205,7 +289,7 @@ header .link {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.main h2 p {
+.main h2 span {
   font-weight: 700;
 }
 
@@ -225,7 +309,7 @@ header .link {
 }
 .works .work_projects {
   width: 60%;
-  height: 95%;
+  height: 98%;
   margin: 0 20%;
   display: flex;
   flex-direction: column;
@@ -284,7 +368,7 @@ header .link {
 /* section contact */
 .contact {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 }
 .contact .container {
   height: 100%;
