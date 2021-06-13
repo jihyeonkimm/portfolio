@@ -18,7 +18,7 @@ $(document).ready(function(){
     $('.hidden_bottom').each(function(){
       let bottomOfElement = $(this).offset().top; + $(this).height();
       let bottomOfWindow = $(window).scrollTop(); + $(window).height();
-      if(bottomOfWindow > bottomOfElement - 500) {
+      if(bottomOfWindow > bottomOfElement - 700) {
         $(this).animate({'margin-top':'0','opacity':'1'},1000);
       }
     });
@@ -35,6 +35,18 @@ $(document).ready(function(){
   $('.nav_contact').on('click',function(){
     const contact = $('.contact').offset().top;
     $('html').animate({scrollTop : contact}, 1000);
+  })
+
+  $('.hamburger').on('click',function(){
+    $('.mobile_menu').toggleClass('active');
+    $(this).toggleClass('on');
+    $('.menu_item').toggleClass('view');
+  })
+
+  $('.menu_item').on('click',function(){
+    $('.mobile_menu').removeClass('active');
+    $('.hamburger').toggleClass('on');
+    $('.menu_item').toggleClass('view');
   })
 
 })
